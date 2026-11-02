@@ -7,6 +7,7 @@ import Memo from './stroage/Memo';
 import Todos from './stroage/Todos';
 import PostDetail from './posts/PostDetail';
 import AddPost from './posts/AddPost';
+import Bank from './reducer/Bank';
 
 function App() {
 
@@ -18,13 +19,14 @@ const doClick = () => {
   return (
     <>
       <section className="app">
-        <BrowserRouter>
+        <Bank />
+        {/* <BrowserRouter>
           <Routes>
             <Route path='/' element={<Posts />} />
             <Route path='/posts/:id' element={<PostDetail />} />
             <Route path='/posts/add' element={<AddPost />} />
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
         
         {/* <Memo /> */}
         {/* <Todos /> */}

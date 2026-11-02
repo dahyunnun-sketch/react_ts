@@ -27,6 +27,17 @@ const PostDetail = () => {
     // 로딩되지 않았을 때 메세지 표시
     if(!post) return <div>로딩중 ...</div>
 
+    // 삭제 함수
+    const deletePost = async (id: number) => {
+        try {
+            await axios.delete(`https://jsonplaceholder.typicode.com/posts${id}`);
+            alert("게시글이 삭제되었습니다.");
+            navigate('/');
+        } catch (err) {
+            alert("게시글 삭제 중 오류가 발생했습니다.");
+        }
+    }
+
     return(
         <div>
             <h2>게시글 내용</h2>
@@ -37,6 +48,7 @@ const PostDetail = () => {
 
             {/* navigate(-1) 도 가능  */}
             <button onClick={() => navigate('/')}>뒤로가기</button>
+            <button onClick={() => deletePost(post.id)}>삭제</button>
         </div>
     )
 }
