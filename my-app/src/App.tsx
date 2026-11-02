@@ -1,13 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
-import Posts from './posts/Posts';
-import Box from './props/Box';
-import Card from './props/Card';
-import Memo from './stroage/Memo';
-import Todos from './stroage/Todos';
-import PostDetail from './posts/PostDetail';
-import AddPost from './posts/AddPost';
-import Bank from './reducer/Bank';
+import ProductList from './products/ProductList';
+import Header from './layouts/Header';
+import Cart from './products/Cart';
 
 function App() {
 
@@ -19,14 +14,13 @@ const doClick = () => {
   return (
     <>
       <section className="app">
-        <Bank />
-        {/* <BrowserRouter>
+        <BrowserRouter>
+        <Header />
           <Routes>
-            <Route path='/' element={<Posts />} />
-            <Route path='/posts/:id' element={<PostDetail />} />
-            <Route path='/posts/add' element={<AddPost />} />
+            <Route path='/' element={<ProductList />} />
+            <Route path='/cart' element={<Cart />} />
           </Routes>
-        </BrowserRouter> */}
+        </BrowserRouter>
         
         {/* <Memo /> */}
         {/* <Todos /> */}
