@@ -10,6 +10,14 @@ export interface Product{
     description: string
 }
 
+// 상품 등록 폼 타입 정의
+export interface ProductForm{
+    pName: string,
+    category: Category,
+    price: number,
+    description: string
+}
+
 // 상품 등록시 입력받는 값
 // id는 자동으로 부여되므로 제외
 export type NewProduct = Omit<Product, "id">
