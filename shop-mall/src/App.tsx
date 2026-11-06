@@ -10,6 +10,7 @@ import Cart from './products/Cart'
 import UserProvider from './context/UserProvider'
 import SignUp from './users/SignUp'
 import SignIn from './users/SignIn'
+import AdminPage from './users/AdminPage'
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
               <Route path='/cart' element={<Cart />} />
               <Route path='/signup' element={<SignUp />} />
               <Route path='/signin' element={<SignIn />} />
+              {/* 관리자 페이지 */}
+              <Route path='/users' element={<AdminPage />} />
             </Routes>
           </main>
         </BrowserRouter>
