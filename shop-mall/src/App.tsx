@@ -31,7 +31,8 @@ function App() {
               <Route path='/signup' element={<SignUp />} />
               <Route path='/signin' element={<SignIn />} />
               {/* 관리자 페이지 */}
-              <Route path='/users' element={<AdminPage />} />
+              <Route path='/admin' element={<AdminPage />} />
+              <Route path='/adminpage' element={<AdminPage />} />
             </Routes>
           </main>
         </BrowserRouter>
